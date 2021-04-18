@@ -213,7 +213,7 @@ img {
   max-width: 300px;
   margin: 20px auto;
   font-size: 1.25rem;
-   font-style: italic;
+  font-style: italic;
   color: #7c7c7c;
 }
 
@@ -225,7 +225,7 @@ img {
 }
 
 .preco-item li::after {
-  content: '';
+  content: "";
   display: block;
   width: 6px;
   height: 6px;
@@ -244,4 +244,52 @@ img {
   font-size: 2.25rem;
   padding: 15px 0;
   text-align: center;
+}
+
+/*Qualidade*/
+
+.qualidade {
+  max-width: 960px;
+  margin: 60px auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.qualidade-item {
+  flex: 1 1 300px;
+  margin: 20px 10px;
+}
+
+.qualidade-item h2 {
+  font-size: 2.25rem;
+  color: #a4a4a4;
+  margin-bottom: 20px;
+}
+
+.qualidade-item h2::before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+/*Usando o pseudo seletor :nth-of-type(),colocar uma expressão para não ter que ficar repetindo várias vezes no código*/
+
+.qualidade-item:nth-of-type(3n+1) h2::before {
+  background: #ae81ff;
+}
+
+.qualidade-item:nth-of-type(3n+2) h2::before {
+  background: #f9265e;
+}
+
+.qualidade-item:nth-of-type(3n+3) h2::before {
+  background: #66d9eb;
+}
+
+.qualidade-item p {
+  font-size: 1.25rem;
+  line-height: 1.4;
+  color: #7c7c7c;
 }
